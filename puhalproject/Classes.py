@@ -1,5 +1,4 @@
 import time
-import sys
 class Worker():
     def __init__(self, name, age, profession, onbreak):
         self.name = name
