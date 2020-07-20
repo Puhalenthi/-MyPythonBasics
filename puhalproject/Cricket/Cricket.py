@@ -11,9 +11,9 @@ DY = 600
 gameDisplay = pygame.display.set_mode((DX, DY)) #Creating the game window
 
 #Variables to load the image from my computer
-ball = pygame.image.load(r'C:\Python\cricketBall.png')
-bat1 = pygame.image.load(r'C:\Python\cricketBat.png')
-bat2 = pygame.image.load(r'C:\Python\Cricket.png')
+ball = pygame.image.load(r'C:\Git\-MyPythonBasics\puhalproject\Cricket\cricketBall.png')
+bat1 = pygame.image.load(r'C:\Git\-MyPythonBasics\puhalproject\Cricket\cricketBat.png')
+bat2 = pygame.image.load(r'C:\Git\-MyPythonBasics\puhalproject\Cricket\Cricket.png')
 clock = pygame.time.Clock()
 #First three functions to load the images
 def loadbat(x, y):
@@ -24,30 +24,45 @@ def loadbat2(x, y):
     gameDisplay.blit(bat2, (x, y))
 #Display Player 1's score
 def displayScoreP1(scorep1):
-    font = pygame.font.Font('freesansbold.ttf', 25) #Using the font. param: ('font.ttf', size)
-    finalScore = 'Yellow Hits: {}'.format(scorep1)
-    display = font.render(finalScore, True, (0, 255, 0)) #Making the text displayable. param: (Text, True, (R, B, G))
-    gameDisplay.blit(display, (DX - 200, DY - 100)) #Display the text. param: (text, (x, y))
+    try:
+        font = pygame.font.Font('freesansbold.ttf', 25) #Using the font. param: ('font.ttf', size)
+        finalScore = 'Yellow Hits: {}'.format(scorep1)
+        display = font.render(finalScore, True, (0, 255, 0)) #Making the text displayable. param: (Text, True, (R, B, G))
+        gameDisplay.blit(display, (DX - 200, DY - 100)) #Display the text. param: (text, (x, y))
+    except:
+        pass
 def displayScoreP2(scorep2):
-    font = pygame.font.Font('freesansbold.ttf', 25) #Using the font. param: ('font.ttf', size)
-    finalScore = 'Black Hits: {}'.format(scorep2)
-    display = font.render(finalScore, True, (0, 255, 0)) #Making the text. displayable param: (Text, True, (R, B, G))
-    gameDisplay.blit(display, (0, DY - 100)) #Display the tex.t param: (text, (x, y))
+    try:
+        font = pygame.font.Font('freesansbold.ttf', 25) #Using the font. param: ('font.ttf', size)
+        finalScore = 'Black Hits: {}'.format(scorep2)
+        display = font.render(finalScore, True, (0, 255, 0)) #Making the text. displayable param: (Text, True, (R, B, G))
+        gameDisplay.blit(display, (0, DY - 100)) #Display the tex.t param: (text, (x, y))
+    except:
+        pass
 def displayMissP1(missp1):
-    font = pygame.font.Font('freesansbold.ttf', 25) #Using the font. param: ('font.ttf', size)
-    finalMiss = 'Yellow Miss:  {}'.format(missp1)
-    display = font.render(finalMiss, True, (255, 0, 0)) #Making the text. displayable. param: (Text, True, (R, B, G))
-    gameDisplay.blit(display, (DX - 200, DY - 50)) #Display the text. param: (text, (x, y))
+    try:
+        font = pygame.font.Font('freesansbold.ttf', 25) #Using the font. param: ('font.ttf', size)
+        finalMiss = 'Yellow Miss:  {}'.format(missp1)
+        display = font.render(finalMiss, True, (255, 0, 0)) #Making the text. displayable. param: (Text, True, (R, B, G))
+        gameDisplay.blit(display, (DX - 200, DY - 50)) #Display the text. param: (text, (x, y))
+    except:
+        pass
 def displayMissP2(missp2):
-    font = pygame.font.Font('freesansbold.ttf', 25)
-    finalMiss = 'Black Miss:  {}'.format(missp2) #Using the font. param: ('font.ttf', size)
-    display = font.render(finalMiss, True, (255, 0, 0)) #Making the text displayable. param: (Text, True, (R, B, G))
-    gameDisplay.blit(display, (0, DY - 50)) #Display the text. param: (text, (x, y))
+    try:
+        font = pygame.font.Font('freesansbold.ttf', 25)
+        finalMiss = 'Black Miss:  {}'.format(missp2) #Using the font. param: ('font.ttf', size)
+        display = font.render(finalMiss, True, (255, 0, 0)) #Making the text displayable. param: (Text, True, (R, B, G))
+        gameDisplay.blit(display, (0, DY - 50)) #Display the text. param: (text, (x, y))
+    except:
+        pass
 def displayTotalBalls(totalBalls):
-    font = pygame.font.Font('freesansbold.ttf', 25) #Using the font param: ('font.ttf', size)
-    finalBalls = 'Ball Number:  {}'.format(totalBalls)
-    display = font.render(finalBalls, True, (0, 0, 0)) #Making the text displayable. param: (Text, True, (R, B, G))
-    gameDisplay.blit(display, (DX / 2 - 125, 500)) #Display the text. param: (text, (x, y))
+    try:
+        font = pygame.font.Font('freesansbold.ttf', 25) #Using the font param: ('font.ttf', size)
+        finalBalls = 'Ball Number:  {}'.format(totalBalls)
+        display = font.render(finalBalls, True, (0, 0, 0)) #Making the text displayable. param: (Text, True, (R, B, G))
+        gameDisplay.blit(display, (DX / 2 - 125, 500)) #Display the text. param: (text, (x, y))
+    except:
+        pass
 def gameLoop(): #Loop for the game
     #Lines 53 - 67: Variables for the location of the objects and scoring numbers
     bat1x = DX/2 + 50
@@ -64,6 +79,9 @@ def gameLoop(): #Loop for the game
     scorep2 = 0
     missp1 = 0
     missp2 = 0
+    r = 0
+    g = 0
+    b = 0
     totalBalls = 0
     pygame.display.set_caption('DREAM 11') #Setting the title of the ame window. param: (text)
     #Lines 70 - 76: Using the functions from lines 19 - 50
@@ -121,7 +139,16 @@ def gameLoop(): #Loop for the game
             scorep2 += 1 #Adding a point for player two
             missp1 += 1 #Adding one to the number of missed balls for player 1
             changeBallY += 4 #To make the ball go faster after the hit
-        gameDisplay.fill((200, 150, 255)) #The color the background. Also to erasethe previous loctions of the ball
+        gameDisplay.fill((r, g, b)) #The color the background. Also to erase the previous loctions of the ball
+        if r == 255:
+            r = 0
+            g += 5
+        if g == 255:
+            g = 0
+            b += 5
+        if b == 255:
+            b = 0
+            r += 5
         #Lines 126 - 130: Using the functions from lines 19 - 50
         displayScoreP1(scorep1)
         displayScoreP2(scorep2)
@@ -130,4 +157,4 @@ def gameLoop(): #Loop for the game
         displayTotalBalls(totalBalls + 1)
         clock.tick(1000) #Setting the speed of the game
 
-gameLoop()
+print(pygame.colordict)

@@ -16,4 +16,4 @@ def DirectoryHandling(path, num):
 
 path = r'' # Specify the full path name between the quotes. It will return all the files/directories in the path!!!  
 
-DirectoryHandling(r'C:\\', 4)
+DirectoryHandling(path, 4)
