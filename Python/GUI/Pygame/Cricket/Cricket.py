@@ -11,9 +11,9 @@ DY = 600
 gameDisplay = pygame.display.set_mode((DX, DY)) #Creating the game window
 
 #Variables to load the image from my computer
-ball = pygame.image.load(r'C:\Git\-MyPythonBasics\puhalproject\Cricket\cricketBall.png')
-bat1 = pygame.image.load(r'C:\Git\-MyPythonBasics\puhalproject\Cricket\cricketBat.png')
-bat2 = pygame.image.load(r'C:\Git\-MyPythonBasics\puhalproject\Cricket\Cricket.png')
+#ball = pygame.image.load(r'C:\Git\-MyPythonBasics\puhalproject\Cricket\cricketBall.png')
+#bat1 = pygame.image.load(r'C:\Git\-MyPythonBasics\puhalproject\Cricket\cricketBat.png')
+#bat2 = pygame.image.load(r'C:\Git\-MyPythonBasics\puhalproject\Cricket\Cricket.png')
 clock = pygame.time.Clock()
 #First three functions to load the images
 def loadbat(x, y):
@@ -156,5 +156,3 @@ def gameLoop(): #Loop for the game
         displayMissP2(missp2)
         displayTotalBalls(totalBalls + 1)
         clock.tick(1000) #Setting the speed of the game
-
-print(pygame.colordict)

@@ -12,7 +12,7 @@ def savefile():
     global text3, filenamelabel
     filename = textfilename.get()
     code = codebox.get('1.0', 'end')
-    filename += '.py'
+    filename += '.html'
     with open(filename, 'w') as f:
         f.write(code)
     previouscontent = text3['text']

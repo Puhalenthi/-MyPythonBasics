@@ -24,11 +24,11 @@ DY = 500
 
 screen = pygame.display.set_mode((DX, DY))
 
-screen.fill(black)
+screen.fill(bg)
 
 pygame.display.set_caption('Puhal\'s Snake Game')
 
-eatingsound = pygame.mixer.Sound('nom-nom-nom_gPJiWn4.wav')
+#eatingsound = pygame.mixer.Sound('nom-nom-nom_gPJiWn4.wav')
 
 pygame.display.flip()
 
@@ -143,7 +143,7 @@ def mainloop():
                 lasty -= 10
             snakecontainer.append([lastx, lasty])
             score += 1
-            pygame.mixer.Sound.play(eatingsound)
+            #pygame.mixer.Sound.play(eatingsound)
 
         
 
@@ -175,7 +175,7 @@ def mainloop():
         pygame.draw.rect(screen, red, [redx, redy, 10, 10])
 
         pygame.display.flip()
-        screen.fill(black)
+        screen.fill(bg)
         time.sleep(0.1)
 
 mainloop()

@@ -25,7 +25,7 @@ screen.fill(bg)
 
 pygame.display.set_caption('Puhal\'s Tron Game')
 
-hitsound = pygame.mixer.Sound('hitsound.wav')
+#hitsound = pygame.mixer.Sound('Users/puhal/Documents/Python/GUI/Snake/hitsound.wav')
 
 pygame.display.flip()
 
@@ -174,11 +174,11 @@ def mainloop():
             if len(p1container) != len(set(p1container)):
                 done = True
                 message = 'Red hit their own body'
-                pygame.mixer.Sound.play(hitsound)
+                #pygame.mixer.Sound.play(hitsound)
             if len(p2container) != len(set(p2container)):
                 done = True
                 message = 'Blue hit their own body'
-                pygame.mixer.Sound.play(hitsound)
+                #pygame.mixer.Sound.play(hitsound)
 
             for i in range(-1, 2):
                 for j in range(-1, 2):
@@ -190,12 +190,12 @@ def mainloop():
                     if (newi1, newj1) in p2container:
                         done = True
                         message = 'Red hit Blue'
-                        pygame.mixer.Sound.play(hitsound)
+                        #pygame.mixer.Sound.play(hitsound)
 
                     elif (newi2, newj2) in p1container:
                         done = True
                         message = 'Blue hit Red'
-                        pygame.mixer.Sound.play(hitsound)
+                        #pygame.mixer.Sound.play(hitsound)
             
             for position in range(1, len(p1container)):
                 try:
