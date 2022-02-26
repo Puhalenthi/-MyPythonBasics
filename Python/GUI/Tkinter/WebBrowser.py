@@ -1,6 +1,5 @@
 import tkinter
 import webbrowser
-import requests
 
 screen = tkinter.Tk()
 

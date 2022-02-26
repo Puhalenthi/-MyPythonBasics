@@ -1,11 +1,11 @@
 class Sales:
-    def __init__(self, url):
+    def __init__(self, url): # Opens the file and retrieves its contents
         with open(url, 'r') as f:
             self.file = f.readlines()
         
         self.totalsaleslist = []
     
-    def SumByStore(self):
+    def SumByStore(self): # Sums up the values by stores
         for index in range(len(self.file)):
             if index % 2 == 0:
                 print(self.file[index])
@@ -19,14 +19,14 @@ class Sales:
                 print(val)
                 print('+-----------------+')
 
-    def add(self, list):
+    def add(self, list): # Adds the item in the list
         counter = 0
         for i in list:
             counter += i
         
         return counter
     
-    def storesByValue(self):
+    def storesByValue(self): # Arranges the stores by their total sales (Least to Greatest)
         if self.totalsaleslist == []:
             self.SumByStore()
         
