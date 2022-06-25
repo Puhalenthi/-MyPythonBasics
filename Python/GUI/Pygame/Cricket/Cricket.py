@@ -11,9 +11,9 @@ DY = 600
 gameDisplay = pygame.display.set_mode((DX, DY)) #Creating the game window
 
 #Variables to load the image from my computer
-#ball = pygame.image.load(r'C:\Git\-MyPythonBasics\puhalproject\Cricket\cricketBall.png')
-#bat1 = pygame.image.load(r'C:\Git\-MyPythonBasics\puhalproject\Cricket\cricketBat.png')
-#bat2 = pygame.image.load(r'C:\Git\-MyPythonBasics\puhalproject\Cricket\Cricket.png')
+ball = pygame.image.load(r'/Users/puhal/Documents/GitHub/-MyPythonBasics/Python/GUI/Pygame/Cricket/cricketBall.png')
+bat1 = pygame.image.load(r'/Users/puhal/Documents/GitHub/-MyPythonBasics/Python/GUI/Pygame/Cricket/cricketBat.png')
+bat2 = pygame.image.load(r'/Users/puhal/Documents/GitHub/-MyPythonBasics/Python/GUI/Pygame/Cricket/Cricket.png')
 clock = pygame.time.Clock()
 #First three functions to load the images
 def loadbat(x, y):
@@ -139,16 +139,7 @@ def gameLoop(): #Loop for the game
             scorep2 += 1 #Adding a point for player two
             missp1 += 1 #Adding one to the number of missed balls for player 1
             changeBallY += 4 #To make the ball go faster after the hit
-        gameDisplay.fill((r, g, b)) #The color the background. Also to erase the previous loctions of the ball
-        if r == 255:
-            r = 0
-            g += 5
-        if g == 255:
-            g = 0
-            b += 5
-        if b == 255:
-            b = 0
-            r += 5
+        gameDisplay.fill((255, 255, 255)) #The color the background. Also to erase the previous loctions of the ball
         #Lines 126 - 130: Using the functions from lines 19 - 50
         displayScoreP1(scorep1)
         displayScoreP2(scorep2)
@@ -156,3 +147,5 @@ def gameLoop(): #Loop for the game
         displayMissP2(missp2)
         displayTotalBalls(totalBalls + 1)
         clock.tick(1000) #Setting the speed of the game
+
+gameLoop()

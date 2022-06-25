@@ -45,7 +45,7 @@ class Maze():
         done = False
         while done != True:
 
-            if self.board[self.calcTo1D(self.cr, self.cc)] == 'E':
+            if self.board[self.calcTo1D(self.cr, self.cc)] == 'F':
                 done = True
             #Up
             if self.board[self.calcTo1D(self.cr-1, self.cc)] == '.' and (self.cr-1, self.cc) not in self.path:
@@ -83,3 +83,15 @@ class Maze():
         index -= 1
         return index
 
+a = Maze(5, 5)
+
+a.setwall(3, 0)
+a.setwall()
+a.setwall()
+a.setwall()
+a.setwall()
+a.setwall()
+a.setwall()
+a.setwall()
+a.setwall()
+a.setwall()

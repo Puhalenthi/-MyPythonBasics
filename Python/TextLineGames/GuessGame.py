@@ -1,10 +1,10 @@
 import random
 def guessgame(num, num2):
     answer = random.randint(num, num2)
-    guessesleft = 5
+    guessesleft = 10
     while guessesleft >= 1:
         guessesleft -= 1
-        guess = int(input('Give me a number between {} and {}'.format(num, num2)))
+        guess = int(input('Give me a number between {} and {}:  '.format(num, num2)))
         if guess == answer:
             print('Congrats, you have guessed the right answer')
         elif guess < answer:

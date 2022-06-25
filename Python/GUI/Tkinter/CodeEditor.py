@@ -12,7 +12,6 @@ def savefile():
     global text3, filenamelabel
     filename = textfilename.get()
     code = codebox.get('1.0', 'end')
-    filename += '.html'
     with open(filename, 'w') as f:
         f.write(code)
     previouscontent = text3['text']
@@ -25,7 +24,6 @@ def savefile():
 def loadfile():
     global text3, filenamelabel
     filename = textfilename1.get()
-    filename += '.py'
     try:
         with open(filename, 'r') as f:
             context = f.read()

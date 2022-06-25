@@ -1,4 +1,4 @@
-
+import time
 
 def animate(string):
     string = string

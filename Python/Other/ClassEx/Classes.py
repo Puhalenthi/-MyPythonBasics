@@ -1,6 +1,6 @@
-import time
+'''import time
 class Worker():
-#    '''This is a worker class.\nThere are many methods such as change_name(), retire, etc.\nTo start, do Worker(name, age, profession, are_on_a_break).'''
+#       This is a worker class.\nThere are many methods such as change_name(), retire, etc.\nTo start, do Worker(name, age, profession, are_on_a_break).
     def __init__(self, name, age, profession, onbreak):
         self.__name = name
         self.__age = age
@@ -46,22 +46,56 @@ class Worker():
             time.sleep(1)
 
 
-mike = Worker('Mike Wayner', 37, 'Construction Worker', False)
+mike = Worker('Mike Wayner', 37, 'Construction Worker', False)'''
+'''
+class Dog():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def __str__(self):
+        return 'My name is {} and I am {} years old.'.format(self.name, self.age)
 
-
+a = Dog('dog', 5)
+print(a)'''
+'''
 class A():
-    b = 0
-    def __init__(self):
-        pass
-    def setter(self, i):
-        self.b = i
-    def printer(self):
-        print(a.b)
-    property(printer, setter)
+    v = 0
+    def C(self):
+        return 100
 
+class B(A):
+    v = 1
+    def C(self):
+        return 101
 
+b = B()
+print(b.v, b.C())'''
+'''
+with open('/Users/puhal/Documents/Python/GUI/Pygame/Tron.py', 'r') as f:
+    contents = f.read()
 
-A().setter(3)
+sum = 0
+spacesum = 0
 
-a = A()
-a.printer()
+for _ in contents:
+    sum += 1
+    if _ == " ":
+        spacesum += 1
+
+print(contents, sum, spacesum)'''
+
+with open('/Users/puhal/documents/python/gui/pygame/Tron.py') as f:
+    contents = f.read()
+
+count = {}
+
+for i in range(32, 127):
+    count[chr(i)] = 0
+
+for i in contents:
+    count[i] += 1
+
+for k, v in count.items():
+    print('{} -> {}'.format(k, v))
+

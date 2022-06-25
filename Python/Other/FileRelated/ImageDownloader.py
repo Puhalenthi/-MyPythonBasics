@@ -22,8 +22,6 @@ def downloader():
     try:
         for i in urls:
             imagebytes = requests.get(i).content
-            numofi = 0
-            for i in 
             downloadname = i.split('/')[3]
             downloadname += '.jpg'
             with open(downloadname, 'wb') as f:

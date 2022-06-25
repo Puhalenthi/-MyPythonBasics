@@ -156,7 +156,7 @@ def mainloop():
             else:
                 done = True
                 checkcontainer = []
-            pygame.draw.rect(screen, (xcolor, ycolor, zcolor), [x, y, 10, 10])
+            pygame.draw.rect(screen, (0, 0, 0), [x, y, 10, 10])
         
         xcolor += 85
         if xcolor == 255:
